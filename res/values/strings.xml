@@ -3,6 +3,9 @@
 
     <string name="app_name">Quick Audio</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="superman">Faster than a speeding bullet! \nMore powerful than a locomotive!</string>
+    <string name="web_page">Info</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
 
 </resources>
