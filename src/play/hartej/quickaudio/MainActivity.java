@@ -22,6 +22,8 @@ public class MainActivity extends Activity {
     }
     
     public void startAudio(View v) {
+    	// Starts audio if not already playing
+
     	Log.e("Pickle", "at startAudio");
     	if(superman.isPlaying()){
     		Log.e("Player", "Audio is playing");
@@ -31,6 +33,10 @@ public class MainActivity extends Activity {
     }
     
     public void stopAudio(View v) {
+    	// Checks if audio is playing.
+    	// If so, stops audio and prepares
+    	// the mediaPlayer asynchronously
+
     	Log.e("Pickle", "at stopAudio");
     	if(superman.isPlaying()) {
     		superman.stop();
@@ -39,18 +45,18 @@ public class MainActivity extends Activity {
     	//superman.reset();
     }
     
-    
-    //@Override
-    //protected void onResume() {
-    	//superman.start();
-    	//super.onResume();
-    //}
+    //Old functions that will start music on app intiation
+    /*@Override
+    protected void onResume() {
+    	superman.start();
+    	super.onResume();
+    }
 
-    //@Override
-    //protected void onPause() {
-    	//superman.stop();
-    	//super.onPause();
-    //}
+    @Override
+    protected void onPause() {
+    	superman.stop();
+    	super.onPause();
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

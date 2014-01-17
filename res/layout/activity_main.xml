@@ -2,45 +2,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="top"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin" >
-
+    
+	<ImageView
+	    android:id="@+id/background"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:adjustViewBounds="true"
+	    android:background="@drawable/superman"
+	    android:contentDescription="@string/backgroundDescription"
+	    android:scaleType="fitCenter" />
+	    
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/superman" />
+        android:layout_centerHorizontal="true"
+        android:text="@string/superman"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/background"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="8dp"
+        android:onClick="startAudio"
+        android:src="@drawable/ic_action_play" />
+
+    <ImageButton
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:onClick="stopAudio"
+        android:src="@drawable/ic_action_pause" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="170dp"
+        android:layout_alignRight="@+id/background"
+        android:layout_alignTop="@+id/button3"
+        android:layout_marginRight="8dp"
         android:onClick="openDC"
         android:text="@string/web_page" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="73dp"
-        android:layout_toLeftOf="@+id/button1"
-        android:onClick="startAudio"
-        android:text="@string/start" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_toRightOf="@+id/button1"
-        android:onClick="stopAudio"
-        android:text="@string/stop" />
 
 </RelativeLayout>
