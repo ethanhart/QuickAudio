@@ -11,11 +11,11 @@
 	<ImageView
 	    android:id="@+id/background"
 	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
+	    android:layout_height="wrap_content"
 	    android:adjustViewBounds="true"
 	    android:background="@drawable/superman"
-	    android:contentDescription="@string/backgroundDescription"
-	    android:scaleType="fitCenter" />
+	    android:scaleType="fitStart"
+	    android:contentDescription="@string/backgroundDescription" />
 	    
     <TextView
         android:id="@+id/textView1"
@@ -23,10 +23,10 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/superman"
-        style="@style/DescriptionText" />
+        android:textSize="16sp" />
 
     <ImageButton
-        android:id="@+id/playbutton"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/background"
@@ -37,21 +37,21 @@
         android:contentDescription="@string/start"/>
 
     <ImageButton
-        android:id="@+id/pausebutton"
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/playbutton"
+        android:layout_alignTop="@+id/button2"
         android:layout_centerHorizontal="true"
         android:onClick="stopAudio"
         android:src="@drawable/ic_action_pause"
         android:contentDescription="@string/pause" />
 
     <Button
-        android:id="@+id/infobutton"
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/background"
-        android:layout_alignTop="@+id/pausebutton"
+        android:layout_alignTop="@+id/button3"
         android:layout_marginRight="8dp"
         android:onClick="openDC"
         android:text="@string/web_page" />
